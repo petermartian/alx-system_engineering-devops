@@ -1,17 +1,2 @@
 #!/bin/bash
-echo "$WATER" | tr 'water' '01234' | {
-  read wnum
-  echo "$STIR" | tr 'stir' '0123' | {
-    read snum
-    sum=$(( 5#$wnum + 4#$snum ))
-    echo "$sum" | while read dec; do
-      out=""
-      while [ $dec -gt 0 ]; do
-        rem=$((dec % 8))
-        dec=$((dec / 8))
-        out=$(echo "bestchol" | cut -c$((rem+1))-$((rem+1)))$out
-      done
-      echo "$out"
-    done
-  }
-}
+echo $(( 5#$(echo $WATER|tr water 01234) + 4#$(echo $STIR|tr stir 0123) )) | tr 01234567 bestchol
