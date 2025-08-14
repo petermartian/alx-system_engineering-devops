@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%o" $(( 5#$(echo $WATER | tr -d -c "water" | tr water 01234) + 4#$(echo $STIR | tr -d -c "stir" | tr stir 0123) )) | tr 01234567 bestchol
+printf "%o" $(( 7#$(echo $WATER | tr -d -c "watersi" | tr watersi 0123456) + 7#$(echo $STIR | tr -d -c "watersi" | tr watersi 0123456) )) | tr 01234567 bestchol
