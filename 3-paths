@@ -1,0 +1,7 @@
+#!/bin/bash <<<<<<< HEAD echo "$PATH" | tr ':' '\n' | grep -v '^$' | wc 
+-l | tr -d ' ' ======= echo "$PATH" | tr ':' '\n' | grep -v '^$' | wc 
+-l | tr -d ' ' >>>>>>> 8f39db0 (Fix Task 3: output plain number without 
+spaces)
+#!/bin/bash
+echo "$PATH" | tr ":" "\n" | grep -v "^$" | wc -l | tr -d " "
+
